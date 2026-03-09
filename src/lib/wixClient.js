@@ -2,7 +2,7 @@ import { createClient, OAuthStrategy } from '@wix/sdk';
 import { items } from '@wix/data';
 
 const WIX_CLIENT_ID = '6aa1ab42-1d0f-4ea1-a4ae-fcd6b67e9ff9';
-const CMS_COLLECTION = 'Formulario Cureo';
+const CMS_COLLECTION = 'FormularioCureo';
 
 const wixClient = createClient({
     modules: { items },
@@ -11,11 +11,9 @@ const wixClient = createClient({
 
 /**
  * Submit contact form data to Wix CMS collection "Formulario Cureo"
- * @param {Object} formData - Form data from the multi-step wizard
- * @returns {Promise<Object>} - The created CMS item
  */
 export async function submitFormToWix(formData) {
-    const dataItem = {
+    const data = {
         nombre: formData.name,
         correo: formData.email,
         telefono: formData.phone,
@@ -24,6 +22,19 @@ export async function submitFormToWix(formData) {
         marketing: formData.consentMarketing,
     };
 
-    const result = await wixClient.items.insert(CMS_COLLECTION, { data: dataItem });
-    return result;
+    console.log('Submitting to Wix CMS:', data);
+
+    try {
+        const result = await wixClient.items.insert(CMS_COLLECTION, data);
+        console.log('Wix CMS Response:', result);
+        return result;
+    } catch (err) {
+        console.error('Wix CMS Error Details:', {
+            message: err.message,
+            code: err.code,
+            details: err.details,
+            full: err,
+        });
+        throw err;
+    }
 }
