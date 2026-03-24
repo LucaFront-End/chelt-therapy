@@ -20,11 +20,11 @@
   --color-text-tertiary: #8B90A0;
   --color-text-on-accent: #FFFFFF;
 
-  --color-accent: #00B89C;
-  --color-accent-light: #00D4B1;
-  --color-accent-dark: #009B82;
-  --color-accent-glow: rgba(0, 184, 156, 0.15);
-  --color-accent-subtle: rgba(0, 184, 156, 0.06);
+  --color-accent: #1860A6;
+  --color-accent-light: #2070BE;
+  --color-accent-dark: #134D85;
+  --color-accent-glow: rgba(24, 96, 166, 0.15);
+  --color-accent-subtle: rgba(24, 96, 166, 0.06);
 
   --color-border: rgba(13, 15, 20, 0.08);
   --color-border-strong: rgba(13, 15, 20, 0.14);
