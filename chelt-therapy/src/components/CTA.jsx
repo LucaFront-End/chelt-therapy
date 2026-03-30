@@ -122,19 +122,19 @@ export default function CTA() {
                             {current.id === 'name' && (
                                 <div className="cta__input-wrap">
                                     <User className="cta__input-icon" size={20} />
-                                    <input type="text" className="cta__input cta__input--large" placeholder="Tu nombre completo" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} onKeyDown={handleKeyDown} autoFocus />
+                                    <input type="text" className="cta__input cta__input--large" placeholder="Tu nombre completo" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} onKeyDown={handleKeyDown} />
                                 </div>
                             )}
                             {current.id === 'email' && (
                                 <div className="cta__input-wrap">
                                     <Mail className="cta__input-icon" size={20} />
-                                    <input type="email" className="cta__input cta__input--large" placeholder="correo@institucion.com" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} onKeyDown={handleKeyDown} autoFocus />
+                                    <input type="email" className="cta__input cta__input--large" placeholder="correo@institucion.com" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} onKeyDown={handleKeyDown} />
                                 </div>
                             )}
                             {current.id === 'phone' && (
                                 <div className="cta__input-wrap">
                                     <Phone className="cta__input-icon" size={20} />
-                                    <input type="tel" className="cta__input cta__input--large" placeholder="+52 55 1234 5678" value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} onKeyDown={handleKeyDown} autoFocus />
+                                    <input type="tel" className="cta__input cta__input--large" placeholder="+52 55 1234 5678" value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} onKeyDown={handleKeyDown} />
                                 </div>
                             )}
                             {current.id === 'role' && (
