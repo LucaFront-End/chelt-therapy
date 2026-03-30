@@ -1,0 +1,217 @@
+/* ═══════════════════════════════════════════════════════════
+   THERAPIES — Interactive Accordion Cards
+   ═══════════════════════════════════════════════════════════ */
+
+.therapies__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+/* ─── Item ────────────────────────────────────────────────── */
+.therapies__item {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-out);
+    position: relative;
+    border-left: 4px solid transparent;
+}
+
+.therapies__item:hover {
+    box-shadow: var(--shadow-md);
+    border-left-color: var(--t-color);
+}
+
+.therapies__item--active {
+    border-left-color: var(--t-color);
+    box-shadow: var(--shadow-lg), 0 0 0 1px color-mix(in srgb, var(--t-color) 12%, transparent);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--t-color) 3%, var(--color-bg-elevated)), var(--color-bg-elevated));
+}
+
+/* ─── Header ──────────────────────────────────────────────── */
+.therapies__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-5) var(--space-6);
+    gap: var(--space-4);
+}
+
+.therapies__item-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.therapies__item-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.35s var(--ease-out);
+    color: var(--t-color);
+    background: color-mix(in srgb, var(--t-color) 10%, transparent);
+}
+
+.therapies__item--active .therapies__item-icon {
+    background: var(--t-color);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--t-color) 30%, transparent);
+}
+
+.therapies__item-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.therapies__item-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    transition: color 0.3s;
+}
+
+.therapies__item--active .therapies__item-name {
+    color: var(--t-color);
+}
+
+.therapies__item-short {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    font-weight: 500;
+}
+
+.therapies__item-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.therapies__item-temp {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 800;
+    color: var(--t-color);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.therapies__item--active .therapies__item-temp {
+    opacity: 1;
+}
+
+.therapies__item-chevron {
+    color: var(--color-text-tertiary);
+    transition: all 0.35s var(--ease-out);
+}
+
+.therapies__item--active .therapies__item-chevron {
+    transform: rotate(180deg);
+    color: var(--t-color);
+}
+
+/* ─── Expandable Body ─────────────────────────────────────── */
+.therapies__item-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s var(--ease-out);
+}
+
+.therapies__item--active .therapies__item-body {
+    grid-template-rows: 1fr;
+}
+
+.therapies__item-body-inner {
+    overflow: hidden;
+}
+
+.therapies__item--active .therapies__item-body-inner {
+    padding: 0 var(--space-6) var(--space-6) var(--space-6);
+    padding-left: calc(var(--space-6) + 44px + var(--space-4)); /* align with text */
+}
+
+.therapies__item-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-5);
+    animation: fade-up 0.4s var(--ease-out) 0.1s both;
+}
+
+.therapies__item-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.therapies__item-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    animation: fade-up 0.4s var(--ease-out) both;
+}
+
+.therapies__item-benefits li:nth-child(1) { animation-delay: 0.15s; }
+.therapies__item-benefits li:nth-child(2) { animation-delay: 0.25s; }
+.therapies__item-benefits li:nth-child(3) { animation-delay: 0.35s; }
+
+.therapies__item-benefits li svg {
+    color: var(--t-color);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .therapies__item-header {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .therapies__item-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .therapies__item-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .therapies__item-name {
+        font-size: var(--text-sm);
+    }
+
+    .therapies__item-sub {
+        font-size: 10px;
+    }
+
+    .therapies__item--active .therapies__item-body-inner {
+        padding: var(--space-4);
+        font-size: var(--text-sm);
+    }
+
+    .therapies__item-temp {
+        font-size: var(--text-sm);
+    }
+
+    .therapies__feature {
+        font-size: var(--text-xs);
+    }
+}
