@@ -105,8 +105,8 @@ export const technologyContent = {
     modes: [
         'CW (Continuo)', 'Pulsado I', 'Pulsado II', 'Pulsado III',
         'Personalizado I', 'Personalizado II', 'Superpulsado I', 'Superpulsado II',
-        'Estocástico I', 'Estocástico II', 'Burst I', 'Burst II',
-        'Pulso Único', 'Antiinflamatorio', 'Analgésico (E²C)', 'Fotobiomodulación (PBM)',
+        'Estocástico I', 'Estocástico II', 'Personalizado III', 'Superpulsado III',
+        'Estocástico III', 'CW Modulado', 'Analgésico (E²C)', 'Fotobiomodulación (PBM)',
     ],
 };
 
