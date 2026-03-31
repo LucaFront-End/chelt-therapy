@@ -34,7 +34,7 @@ export default function Footer() {
                 </div>
                 <div className="footer__bottom">
                     <p className="footer__copy">© {year} Bruce Médica. Todos los derechos reservados.</p>
-                    <p className="footer__legal">CHELT Therapy® es una marca de Mectronic Medicale.</p>
+                    <p className="footer__legal">CHELT Therapy® es una marca de Mecmedix.</p>
                 </div>
             </div>
         </footer>

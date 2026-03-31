@@ -143,7 +143,7 @@ export default function Hero() {
                         <span className="hero__stat-number">
                             <AnimatedNumber target={90} suffix="K+" />
                         </span>
-                        <span className="hero__stat-text">Publicaciones<br/>Científicas</span>
+                        <span className="hero__stat-text">Investigaciones<br/>Científicas</span>
                     </div>
                     <div className="hero__stat-divider" />
                     <div className="hero__stat">
@@ -167,10 +167,10 @@ export default function Hero() {
                         <Shield size={14} /> Certificación CE
                     </div>
                     <div className="hero__trust-pill">
-                        <Award size={14} /> Líder Mundial
+                        <Award size={14} /> 7 Patentes Internacionales
                     </div>
                     <div className="hero__trust-pill">
-                        <Activity size={14} /> Control Térmico IA
+                        <Activity size={14} /> Control Térmico Patentado
                     </div>
                 </div>
 

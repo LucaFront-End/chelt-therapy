@@ -46,18 +46,18 @@ export default function Benefits() {
 
                 <div className="benefits__highlight reveal reveal-delay-2">
                     <div className="benefits__highlight-item">
-                        <span className="benefits__highlight-value">90,000+</span>
-                        <span className="benefits__highlight-label">Publicaciones científicas que respaldan las tecnologías</span>
+                        <span className="benefits__highlight-value">98%</span>
+                        <span className="benefits__highlight-label">De los pacientes reporta alivio inmediato del dolor</span>
                     </div>
                     <div className="benefits__highlight-divider" />
                     <div className="benefits__highlight-item">
-                        <span className="benefits__highlight-value">5 en 1</span>
-                        <span className="benefits__highlight-label">Único dispositivo que integra cinco terapias sinérgicas</span>
+                        <span className="benefits__highlight-value">7</span>
+                        <span className="benefits__highlight-label">Patentes internacionales que respaldan la tecnología</span>
                     </div>
                     <div className="benefits__highlight-divider" />
                     <div className="benefits__highlight-item">
-                        <span className="benefits__highlight-value">95°C</span>
-                        <span className="benefits__highlight-label">Gradiente de choque térmico para máxima eficacia</span>
+                        <span className="benefits__highlight-value">130B+</span>
+                        <span className="benefits__highlight-label">Combinaciones terapéuticas posibles para cada paciente</span>
                     </div>
                 </div>
             </div>

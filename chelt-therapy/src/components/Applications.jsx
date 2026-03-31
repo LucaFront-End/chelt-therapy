@@ -52,12 +52,11 @@ const ANTERIOR_MUSCLES = {
 };
 
 const ZONES = [
-    { id: 'head', label: 'Cabeza y Cuello', color: '#A855F7', conditions: ['Cervicalgia', 'Neuralgia', 'Cefalea tensional', 'ATM'], key: 'headLevel' },
-    { id: 'shoulder', label: 'Hombros', color: '#3B82F6', conditions: ['Tendinitis', 'Bursitis', 'Capsulitis adhesiva', 'Manguito rotador'], key: 'shoulderLevel' },
-    { id: 'spine', label: 'Columna y Espalda', color: '#EF4444', conditions: ['Lumbalgia', 'Hernia discal', 'Ciática', 'Espondilitis'], key: 'spineLevel' },
-    { id: 'arm', label: 'Brazos y Manos', color: '#F59E0B', conditions: ['Epicondilitis', 'Túnel carpiano', 'Tendinopatía', 'Rizartrosis'], key: 'armLevel' },
-    { id: 'hip', label: 'Cadera y Pelvis', color: '#10B981', conditions: ['Coxartrosis', 'Trocanteritis', 'Pubalgia', 'Sacroileítis'], key: 'hipLevel' },
-    { id: 'leg', label: 'Piernas y Pies', color: '#EC4899', conditions: ['Rotura fibrilar', 'Fascitis plantar', 'Esguince tobillo', 'Condromalacia'], key: 'legLevel' },
+    { id: 'spine', label: 'Columna y Neuropatías', color: '#EF4444', conditions: ['Hernia discal', 'Radiculopatías', 'Inflamaciones nerviosas', 'Neuropatías agudas y crónicas'], key: 'spineLevel' },
+    { id: 'shoulder', label: 'Lesiones Musculares', color: '#3B82F6', conditions: ['Lesiones de tejidos blandos', 'Cicatrices musculares', 'Tejido fibrótico', 'Recidivas por mala cicatrización'], key: 'shoulderLevel' },
+    { id: 'arm', label: 'Lesiones Tendineas', color: '#F59E0B', conditions: ['Patologías tendineas agudas', 'Patologías tendineas crónicas', 'Estados inflamatorios tendineos', 'Reducción de uso de fármacos'], key: 'armLevel' },
+    { id: 'hip', label: 'Edemas', color: '#10B981', conditions: ['Edemas quirúrgicos', 'Edemas traumáticos', 'Reabsorción rápida por óxido nítrico', 'Reducción de inflamación post-operatoria'], key: 'hipLevel' },
+    { id: 'leg', label: 'Heridas y Queloides', color: '#EC4899', conditions: ['Heridas patológicas', 'Heridas post-operatorias', 'Heridas post-traumáticas', 'Queloides y cicatrices'], key: 'legLevel' },
 ];
 
 /* Render the realistic SVG */
@@ -105,7 +104,7 @@ export default function Applications() {
                         </span>
                         <h2 className="section-header__title apps__title">Áreas de Tratamiento</h2>
                         <p className="section-header__subtitle apps__subtitle">
-                            Explorá las zonas del cuerpo que CHELT Therapy puede tratar.
+                            Indicada para todas las patologías agudas y crónicas del aparato locomotor.
                         </p>
                     </div>
 
@@ -149,15 +148,15 @@ export default function Applications() {
                                 </div>
                             ) : (
                                 <div className="apps__detail-placeholder">
-                                    <p>Seleccioná una zona musculatoriaéqueletica para ver las condiciones tratables</p>
+                                    <p>Seleccioná una zona del cuerpo para ver las condiciones tratables</p>
                                 </div>
                             )}
                         </div>
                     </div>
 
                     <div className="apps__bottom reveal reveal-delay-2">
-                        <span className="apps__bottom-num">30+</span>
-                        <span className="apps__bottom-text">condiciones tratables con un solo dispositivo</span>
+                        <span className="apps__bottom-num">5</span>
+                        <span className="apps__bottom-text">categorías de patologías del aparato locomotor tratables con un solo dispositivo</span>
                     </div>
                 </div>
             </div>

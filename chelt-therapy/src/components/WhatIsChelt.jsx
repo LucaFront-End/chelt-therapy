@@ -62,7 +62,7 @@ export default function WhatIsChelt() {
                                 </div>
                                 <div className="what-is__gc-data">
                                     <span className="what-is__gc-title">Termoterapia</span>
-                                    <span className="what-is__gc-value">+95°C</span>
+                                    <span className="what-is__gc-value">+55°C</span>
                                 </div>
                             </div>
 
@@ -71,8 +71,8 @@ export default function WhatIsChelt() {
                                     <Radiation size={18} />
                                 </div>
                                 <div className="what-is__gc-data">
-                                    <span className="what-is__gc-title">Láser Nd:YAG</span>
-                                    <span className="what-is__gc-value">8 Longitudes</span>
+                                    <span className="what-is__gc-title">THEAL Therapy</span>
+                                    <span className="what-is__gc-value">92W</span>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ export default function WhatIsChelt() {
                     <div className="what-is__stat-divider" />
                     <div className="what-is__stat">
                         <span className="what-is__stat-value">90K<span className="what-is__stat-plus">+</span></span>
-                        <span className="what-is__stat-label">Publicaciones científicas</span>
+                        <span className="what-is__stat-label">Investigaciones científicas</span>
                     </div>
                     <div className="what-is__stat-divider" />
                     <div className="what-is__stat">
